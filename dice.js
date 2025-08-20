@@ -196,6 +196,7 @@ rollbtn.addEventListener("click", () => {
       scoreEl.textContent = "0";
       Level.style.visibility="hidden"
     }, 2000);
+    //hello
   }
   for (let i = 0; i < 6; i++) {
     const el = document.getElementById(`dice${i}`);
