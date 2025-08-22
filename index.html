@@ -1,26 +1,40 @@
-
-
 <!DOCTYPE html>
 <html>
 <head>
 <link rel="stylesheet" href="styles.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>My Dice new Game</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=logout" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0&icon_names=logout" />
+
 </head>
 <body>
 <div class="me">
-<h1 class="total">Total new Score:</h1>
-<h2 id="score" class="score">0</h2>
-<h3 class="level" style="color: whitesmoke;">Level:</h3>
-<h4 id="levelscore" class="levelscore" style="color: whitesmoke; visibility: hidden;">0</h4>
+<h1 class="heading" id="heading">🎲 Dice Game</h1>
+<button class="logout" id="quit"><span class="material-symbols-outlined">logout
+</span></button>
+<div id="customAlert1" class="alert-hidden1">
+<h1 id="alertMessage1">🎲 Dice Game</h1>
+<p>Our Dice Game is a nice game. <br> Rules are so simple for beginners to play.</p>
+<button id="startbtn" >Start</button>
+</div>
+
 
 </div>
 
 <div id="btn">
+
+
 <button class="btn1" id="rollbtn">Roll Dice</button>
 <button class="btn2" id="reset">Reset</button>
-<p class="p2">🔴 Red show you are on danger</p>
-<p class="p3">🟢 Green Shows you are on safe zone </p>
+<div class="totalscore">
+<h1 class="total" id="total">Total new Score:</h1>
+<h2 id="score" class="score">0</h2>
+<h3 class="level" style="color: whitesmoke;" id="level">Level:</h3>
+<h4 id="levelscore" class="levelscore" style="color: whitesmoke; visibility: hidden;">1</h4>
+</div>
+<p class="p2" id="p2">🔴 Red show you are on danger</p>
+<p class="p3" id="p3">🟢 Green Shows you are on safe zone </p>
 <div class="dice" id="empty"></div>
 <div id="dice0" class="dice firstface">
 <span class="dot center" ></span>
@@ -52,27 +66,27 @@
 <div id="showscore">
   <h2 style="color: whitesmoke;"> WOW! You got a 6</h2>
 </div>
-<div class="boards">
+<div class="boards" id="boards">
 <div id="customAlert" class="alert-hidden">
 <p id="alertMessage">Game Over! Play again? 🎮</p>
 <button id="okBtn">OK</button>
 <button id="cancelBtn">Cancel</button>
 </div>
-<div class="board" >
-<div class="box" id="start">
+<div class="board" id="ii" >
+<div class="box" id="start" >
 <div class="Circle" id="circle"></div>
 </div>
 <div class="box" id="box1">1</div>
-<div class="box" id="boxtrap1">2
+<div class="box" id="boxtrap1" >2
 </div>
-<div class="box" id="boxtrap2">3
+<div class="box" id="boxtrap2" >3
 </div>
-<div class="box" id="box5">4
+<div class="box" id="box5" >4
 </div>
-<div class="box" id="box2">5</div>
+<div class="box" id="box2" >5</div>
 </div>
-<div class="board2">
-<div class="box" id="box3" >6</div>
+<div class="board2" id="oo">
+<div class="box" id="box3">6</div>
 <div class="box" id="box6">7
 </div>
 <div class="box" id="boxtrap3"   >8

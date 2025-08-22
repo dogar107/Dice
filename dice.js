@@ -19,7 +19,6 @@ let position = -1;
 let gameStarted = false;
 let score = 0;
 const totalboxes = 40;
-//let currentlevel=1;
 
 const scoreEl = document.getElementById("score");
 const boxes = document.querySelectorAll(".box");
@@ -49,8 +48,28 @@ const bu= document.getElementById("bu");
 const cu=document.getElementById("cu");
 const du=document.getElementById("du");
 const eu=document.getElementById("eu");
+const you=document.getElementById("you");
+const dexter=document.getElementById("dexter");
+const quitbtn=document.getElementById("finishbtn");
+const quit=document.getElementById("quit");
+const startbtn=document.getElementById("startbtn");
+const box7=document.getElementById("box7");
 const traps = ["boxtrap1", "boxtrap2", "boxtrap3", "boxtrap4", "boxtrap5", "boxtrap6", "boxtrap7", "boxtrap8","boxtrap9", "boxtrap10","boxtrap11","boxtrap12"];
 const diceSound = new Audio("audio/dice-roll.mp3");
+const dice0=document.getElementById("dice0");
+const p2=document.getElementById("p2");
+const p3=document.getElementById("p3");
+const boards = document.getElementById("boards");
+const board=document.getElementById("ii");
+const board2=document.getElementById("oo");
+const level=document.getElementById("level");
+const total= document.getElementById("total");
+const heading= document.getElementById("heading");
+
+
+  
+
+
 function resetGame() {
   position = -1;
   game.reset();
@@ -71,6 +90,7 @@ function resetGame() {
   }
 }
 resetbtn.addEventListener("click", resetGame);
+
 rollbtn.addEventListener("click", () => {
   const roll = Math.floor(Math.random() * 6) + 1;
   diceSound.play();
@@ -150,7 +170,8 @@ rollbtn.addEventListener("click", () => {
       game.reset();
       scoreEl.textContent = "0";
       customAlert.style.display = "block";
-      Level.style.visibility="hidden"
+      Level.textContent="1"
+      dice0.style.visibility="visible"
     }, 2000);
 
     okBtn.onclick = () => {
@@ -163,27 +184,27 @@ rollbtn.addEventListener("click", () => {
     };
   }
 
-  if(position===10 || position>10){
-  Level.textContent="1"
+  if(position===11 || position>11){
+  Level.textContent="2"
   Level.style.visibility="visible"
   au.style.visibility="visible"
   bu.style.visibility="visible"
   
 
   }
-  if(position===20 || position>20){
-  Level.textContent="2"
+  if(position===21 || position>21){
+  Level.textContent="3"
   Level.style.visibility="visible"
   cu.style.visibility="visible"
   du.style.visibility="visible"
   }
   if(position===30 || position>30){
-  Level.textContent="3"
+  Level.textContent="4"
   Level.style.visibility="visible"
   eu.style.visibility="visible"
   }
-  if(position === 40){
-  Level.textContent="4"
+  if(position === 41){
+  Level.textContent="5"
   Level.style.visibility="visible"
 
   }
@@ -196,7 +217,7 @@ rollbtn.addEventListener("click", () => {
       scoreEl.textContent = "0";
       Level.style.visibility="hidden"
     }, 2000);
-    //hello
+    
   }
   for (let i = 0; i < 6; i++) {
     const el = document.getElementById(`dice${i}`);
@@ -222,4 +243,55 @@ rollbtn.addEventListener("click", () => {
   if (boxes[position]) {
     boxes[position].appendChild(circleDiv);
   }
+
+ 
+  
 });
+ 
+customAlert1.style.display="block";
+
+
+
+    startbtn.onclick = () => {
+      customAlert1.style.display = "none";
+      resetbtn.style.visibility="visible"
+      rollbtn.style.visibility="visible"
+    dice0.style.visibility="visible"
+    p2.style.visibility="visible"
+    p3.style.visibility="visible"
+    boards.style.visibility="visible"
+    board.style.visibility="visible"
+    board2.style.visibility="visible"
+    total.style.visibility="visible"
+    scoreEl.style.visibility="visible"
+    level.style.visibility="visible"
+    Level.style.visibility="visible"
+    quit.style.visibility="visible"
+    heading.style.visibility="visible"
+    
+    
+    };
+
+    
+
+     quit.onclick= () => {
+       resetGame()
+  scoreEl.textContent="0"
+  customAlert1.style.display="block";
+  resetbtn.style.visibility="hidden"      
+  rollbtn.style.visibility="hidden"
+    
+    p2.style.visibility="hidden"
+    p3.style.visibility="hidden"
+    boards.style.visibility="hidden"
+    board.style.visibility="hidden"
+    board2.style.visibility="hidden"
+    total.style.visibility="hidden"
+    scoreEl.style.visibility="hidden"
+    level.style.visibility="hidden"
+    Level.style.visibility="hidden"
+    quit.style.visibility="hidden"
+    heading.style.visibility="hidden"
+    
+
+     }

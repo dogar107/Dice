@@ -11,6 +11,7 @@ background-color: gray;
     position: relative;
     font-size: 23px;
     cursor: pointer;
+    visibility: hidden;
 }
 
 .btn1:hover{
@@ -19,6 +20,7 @@ background-color: darkred;
 }
 
 .btn2{
+visibility: hidden;
 background-color: gray;
     color: whitesmoke;
     border: none;
@@ -44,11 +46,16 @@ background-color: darkred;
 .p2{
 color:whitesmoke;
 font-size: 15px;
+visibility: hidden;
 }
 
 .p3{
+visibility: hidden;
 color:whitesmoke;
 font-size: 15px;
+    left: 18px;
+    position: relative;
+    top: -19px;
 }
 
 
@@ -61,8 +68,8 @@ align-items: center;
 }
 
 .box{
-  width: 84px;
-  height: 84px;
+  width: 64px;
+  height: 64px;
   background: black;
   border: 2px solid rgb(32, 31, 31);
   border-radius: 12px;
@@ -127,8 +134,7 @@ align-items: center;
 
 #start{
     display: block;
-    width: 84px;
-    height: 84px;
+ 
     justify-content: center;
     display: flex;
     align-items: center;
@@ -137,8 +143,7 @@ align-items: center;
 }
 
 #box1{
-    width: 84px;
-    height: 84px;
+   
     display: block;
     position: relative;
     color:whitesmoke;
@@ -150,8 +155,7 @@ align-items: center;
 
 #boxtrap1{
     display: block;
-    width: 84px;
-    height: 84px;
+    
     color: whitesmoke;
     position: relative;
     align-items: center;
@@ -163,8 +167,7 @@ align-items: center;
 
 #boxtrap2{
     display: block;
-    width: 84px;
-    height: 84px;
+  
     position: relative;
     display: flex;
     justify-content: center;
@@ -176,8 +179,7 @@ align-items: center;
 
 #box5{
     display: block;
-    width: 84px;
-    height: 84px;
+  
     position: relative;
     color:whitesmoke;
     display: flex;
@@ -188,8 +190,8 @@ align-items: center;
 
 #end{
 display: block;
-width: 84px;
-height: 84px;
+top:-128px;
+
 position: relative;
 display: flex;
 align-items: center;
@@ -200,6 +202,7 @@ background-color: gray;
 
 #dice0{
 display: block;
+visibility: hidden;
 }
 
 #boxtrap3{
@@ -304,12 +307,18 @@ visibility: hidden;
 .score{
 color:whitesmoke;
 font-size: 30px;
+left: 64px;
+position: relative;
+visibility: hidden;
 
 
 }
 
 .total{
 color:whitesmoke;
+left: 60px;
+position: relative;
+visibility: hidden;
 }
 
 .me{
@@ -362,8 +371,7 @@ position: relative;
 
 .start{
 
-  width: 84px;
-  height: 84px;
+  
   background: black;
   border: 2px solid darkgray;
   border-radius: 12px;
@@ -377,8 +385,7 @@ position: relative;
 
 .end{
 
-  width: 84px;
-  height: 84px;
+  
   background: black;
   border: 2px solid darkgray;
   border-radius: 12px;
@@ -561,8 +568,7 @@ background-color: black;
 }
 
 #box7{
-    width: 84px;
-    height: 84px;
+   
     display: block;
     position: relative;
     color: whitesmoke;
@@ -574,8 +580,7 @@ background-color: black;
 
 
 #box8{
-    width: 84px;
-    height: 84px;
+    
     display: block;
     position: relative;
     color: whitesmoke;
@@ -587,8 +592,7 @@ background-color: black;
 
 
 #box9{
-    width: 84px;
-    height: 84px;
+   
     display: block;
     position: relative;
     color: whitesmoke;
@@ -600,8 +604,7 @@ background-color: black;
 
 
 #box10{
-    width: 84px;
-    height: 84px;
+ 
     display: block;
     position: relative;
     color: whitesmoke;
@@ -613,8 +616,7 @@ background-color: black;
 
 
 #box11{
-    width: 84px;
-    height: 84px;
+   
     display: block;
     position: relative;
     color: whitesmoke;
@@ -626,8 +628,7 @@ background-color: black;
 
 
 #box12{
-    width: 84px;
-    height: 84px;
+    
     display: block;
     position: relative;
     color: whitesmoke;
@@ -639,8 +640,7 @@ background-color: black;
 
 
 #box13{
-    width: 84px;
-    height: 84px;
+   
     display: block;
     position: relative;
     color: whitesmoke;
@@ -652,14 +652,13 @@ background-color: black;
 
 .board3{
 display: flex;
-top:-213px;
+top: -380px;
 position: relative;
 visibility: hidden;
 }
 
 #box14{
- width: 84px;
-    height: 84px;
+ 
     display: block;
     position: relative;
     color: whitesmoke;
@@ -670,8 +669,7 @@ visibility: hidden;
 }
 
 #box15{
- width: 84px;
-    height: 84px;
+
     display: block;
     position: relative;
     color: whitesmoke;
@@ -682,8 +680,7 @@ visibility: hidden;
 }
 
 #box16{
- width: 84px;
-    height: 84px;
+
     display: block;
     position: relative;
     color: whitesmoke;
@@ -694,8 +691,7 @@ visibility: hidden;
 }
 
 #box17{
-   width: 84px;
-    height: 84px;
+   
     display: block;
     position: relative;
     color: whitesmoke;
@@ -706,8 +702,7 @@ visibility: hidden;
 }
 
 #box18{
- width: 84px;
-    height: 84px;
+
     display: block;
     position: relative;
     color: whitesmoke;
@@ -718,8 +713,7 @@ visibility: hidden;
 }
 
 #box19{
- width: 84px;
-    height: 84px;
+
     display: block;
     position: relative;
     color: whitesmoke;
@@ -730,8 +724,7 @@ visibility: hidden;
 }
 
 #box20{
- width: 84px;
-    height: 84px;
+
     display: block;
     position: relative;
     color: whitesmoke;
@@ -742,8 +735,7 @@ visibility: hidden;
 }
 
 #box21{
- width: 84px;
-    height: 84px;
+
     display: block;
     position: relative;
     color: whitesmoke;
@@ -754,8 +746,7 @@ visibility: hidden;
 }
 
 #box22{
-   width: 84px;
-    height: 84px;
+   
     display: block;
     position: relative;
     color: whitesmoke;
@@ -766,8 +757,7 @@ visibility: hidden;
 }
 
 #box23{
- width: 84px;
-    height: 84px;
+
     display: block;
     position: relative;
     color: whitesmoke;
@@ -778,8 +768,7 @@ visibility: hidden;
 }
 
 #box24{
- width: 84px;
-    height: 84px;
+
     display: block;
     position: relative;
     color: whitesmoke;
@@ -790,8 +779,7 @@ visibility: hidden;
 }
 
 #box25{
- width: 84px;
-    height: 84px;
+
     display: block;
     position: relative;
     color: whitesmoke;
@@ -804,8 +792,7 @@ visibility: hidden;
 
 
 #box26{
- width: 84px;
-    height: 84px;
+
     display: block;
     position: relative;
     color: whitesmoke;
@@ -849,8 +836,8 @@ visibility: hidden;
 }
 
 #box27{
- width: 84px;
-    height: 84px;
+  top:-128px;
+
     display: block;
     position: relative;
     color: whitesmoke;
@@ -861,8 +848,7 @@ visibility: hidden;
 }
 
 #box28{
- width: 84px;
-    height: 84px;
+  top:-128px;
     display: block;
     position: relative;
     color: whitesmoke;
@@ -873,8 +859,7 @@ visibility: hidden;
 }
 
 #box29{
- width: 84px;
-    height: 84px;
+top:-128px;
     display: block;
     position: relative;
     color: whitesmoke;
@@ -893,8 +878,7 @@ visibility: hidden;
 
 #boxtrap5{
 display: block;
-    width: 84px;
-    height: 84px;
+   
     color: whitesmoke;
     position: relative;
     align-items: center;
@@ -906,8 +890,7 @@ display: block;
 
 #boxtrap6{
 display: block;
-    width: 84px;
-    height: 84px;
+   
     color: whitesmoke;
     position: relative;
     align-items: center;
@@ -919,8 +902,7 @@ display: block;
 
 #boxtrap7{
 display: block;
-    width: 84px;
-    height: 84px;
+   
     color: whitesmoke;
     position: relative;
     align-items: center;
@@ -932,8 +914,7 @@ display: block;
 
 #boxtrap8{
 display: block;
-    width: 84px;
-    height: 84px;
+  
     color: whitesmoke;
     position: relative;
     align-items: center;
@@ -945,8 +926,7 @@ display: block;
 
 #boxtrap9{
 display: block;
-    width: 84px;
-    height: 84px;
+   
     color: whitesmoke;
     position: relative;
     align-items: center;
@@ -958,8 +938,7 @@ display: block;
 
 #boxtrap10{
 display: block;
-    width: 84px;
-    height: 84px;
+    
     color: whitesmoke;
     position: relative;
     align-items: center;
@@ -971,8 +950,7 @@ display: block;
 
 #boxtrap11{
 display: block;
-    width: 84px;
-    height: 84px;
+   top:-128px;
     color: whitesmoke;
     position: relative;
     align-items: center;
@@ -985,8 +963,7 @@ display: block;
 
 #boxtrap12{
 display: block;
-    width: 84px;
-    height: 84px;
+    top:-128px;
     color: whitesmoke;
     position: relative;
     align-items: center;
@@ -999,25 +976,180 @@ display: block;
 
 
 .level{
+  visibility: hidden;
 position: relative;
 align-items: center;
     display: flex;
     justify-content: center;
     text-align: center;
-    left: -16%;
     font-style: italic;
     font-size: 29px;
     top:23px;
+    left: -111px;
 }
 
 .levelscore{
+  visibility: hidden;
 position: relative;
     align-items: center;
     display: flex;
     justify-content: center;
     text-align: center;
-    left: -16%;
+    
     font-style: italic;
     font-size: 26px;
-    top: 23px;
+    left: -106px;
+    top: 25px;
 }
+
+.boards{
+visibility: hidden;
+}
+
+#boards {
+        top: -4%;
+    height:526px;
+    background-color: antiquewhite;
+    width: 534px;
+    left: 19%;
+    visibility: hidden;
+    border-style: solid;
+    border-color: white;
+    border-image: initial;
+    border-width: 5px 10px 15px;
+}
+
+#customAlert {
+    display: none;
+    top: 8%;
+    text-align: center;
+    width: 43%;
+    height: 17%;
+    color: white;
+    margin-top: 213px;
+    background: green;
+    padding: 20px;
+}
+
+.alert-hidden {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+#ii {
+    visibility: hidden;
+}
+
+.board {
+    display: flex;
+        top: 46px;
+    position: relative;
+}
+
+.board2 {
+    display: flex;
+    top: -167px;
+    position: relative;
+}
+
+.board3 {
+    display: flex;
+    top: -380px;
+    position: relative;
+    visibility: hidden;
+}
+
+.board4 {
+    display: flex;
+        top: -593px;
+    position: relative;
+    visibility: hidden;
+}
+
+.board5 {
+    display: flex;
+    position: relative;
+    top: -806px;
+    visibility: hidden;
+}
+
+.board6 {
+    display: flex;
+    position: relative;
+    top: -1019px;
+    visibility: hidden;
+}
+
+.board7 {
+    display: flex
+;
+    position: relative;
+    top: -1105px;
+}
+
+#box8 {
+    position: relative;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+}
+
+#box9 {
+    position: relative;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+}
+
+#box10 {
+    position: relative;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+}
+
+#box11 {
+    position: relative;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+}
+
+.logout{
+  color: white;
+    position: relative;
+    left: 79%;
+    background: none;
+    border: none;
+    visibility: hidden;
+}
+
+.heading{
+color:white;
+}
+
+.totalscore{
+  display:flex;
+}
+
+#startbtn{
+    background-color: gray;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+}
+
+
