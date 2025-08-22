@@ -565,6 +565,7 @@ margin-top: 213px;
 
 body{
 background-color: black;
+overflow: hidden;
 }
 
 #box7{
