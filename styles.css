@@ -307,7 +307,7 @@ visibility: hidden;
 .score{
 color:whitesmoke;
 font-size: 30px;
-left: 64px;
+left: 27px;
 position: relative;
 visibility: hidden;
 
@@ -316,7 +316,7 @@ visibility: hidden;
 
 .total{
 color:whitesmoke;
-left: 60px;
+left: 25px;
 position: relative;
 visibility: hidden;
 }
@@ -462,7 +462,8 @@ height: 22%;
 color: white;
 border: none;
 margin-top: 213px;
-left:10%
+left:10%;
+position: relative;
 }
 
 #alertMessage1 {
@@ -567,6 +568,8 @@ left:10%
 body{
 background-color: black;
 overflow: hidden;
+width:100%;
+height:100%;
 }
 
 #box7{
@@ -1132,14 +1135,18 @@ visibility: hidden;
 .logout{
   color: white;
     position: relative;
-    left: 79%;
+    left: 74%;
     background: none;
     border: none;
     visibility: hidden;
+        top: 36%;
+        cursor:pointer;
+
 }
 
 .heading{
 color:white;
+visibility: hidden;
 }
 
 .totalscore{
