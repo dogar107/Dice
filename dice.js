@@ -123,6 +123,7 @@ rollbtn.addEventListener("click", () => {
           }, 400);
         }
       }
+    
     }
   } else {
     position += roll;
@@ -219,6 +220,7 @@ rollbtn.addEventListener("click", () => {
     }, 2000);
     
   }
+  setTimeout(() =>{
   for (let i = 0; i < 6; i++) {
     const el = document.getElementById(`dice${i}`);
     if (el) {
@@ -240,6 +242,7 @@ rollbtn.addEventListener("click", () => {
       }, 400);
     }
   }
+},2000)
   if (boxes[position]) {
     boxes[position].appendChild(circleDiv);
   }
