@@ -92,9 +92,7 @@ function resetGame() {
 resetbtn.addEventListener("click", resetGame);
 
 rollbtn.addEventListener("click", () => {
-  const diceRollSound = new Audio("./audio/dice.mp3");
   const roll = Math.floor(Math.random() * 6) + 1;
-  diceSound.play();
   if (!gameStarted) {
     if (roll === 6 && position === -1) {
       gameStarted = true;
