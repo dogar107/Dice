@@ -219,7 +219,7 @@ rollbtn.addEventListener("click", () => {
     }, 2000);
     
   }
-  setTimeout(() =>{
+ 
   for (let i = 0; i < 6; i++) {
     const el = document.getElementById(`dice${i}`);
     if (el) {
@@ -248,7 +248,7 @@ rollbtn.addEventListener("click", () => {
 
  
   
-});
+
  
 customAlert1.style.display="block";
 
