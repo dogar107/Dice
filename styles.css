@@ -811,7 +811,7 @@ position: relative;
       display: flex;
     top: -426px;
     position: relative;
-    visibility: hidden;
+   
 }
 
 .board5{
@@ -981,7 +981,6 @@ display: block;
 
 
 .level{
-  visibility: hidden;
 position: relative;
 align-items: center;
     display: flex;
@@ -1007,9 +1006,7 @@ position: relative;
     top: 25px;
 }
 
-.boards{
 
-}
 
 #boards {
         top: -1%;
@@ -1045,9 +1042,7 @@ position: relative;
     border-radius: 5px;
 }
 
-#ii {
-    
-}
+
 
 .board {
     display: flex;

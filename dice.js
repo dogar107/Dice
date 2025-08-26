@@ -18,9 +18,8 @@ const game = new Game();
 let position = -1;
 let gameStarted = false;
 let score = 0;
-//const totalboxes = 40;
-const boxSize=11;
-const boxindex=0;
+const totalboxes = 40;
+
 const rollBtn = document.getElementById("rollbtn");
 const boxes = document.querySelectorAll(".box");
 const scoreEl=document.getElementById("score");
@@ -34,6 +33,7 @@ function resetGame() {
   game.reset();
   gameStarted = false;
   scoreEl.textContent = "0";
+  document.getElementById("levelscore").disabled="true"
 
   for (let i = 0; i < 6; i++) {
     const el = document.getElementById(`dice${i}`);
@@ -47,8 +47,7 @@ resetbtn.addEventListener("click", resetGame);
 
 
 rollBtn.addEventListener("click",()=>{
-const total=boxSize + boxindex;
-for(let i =0; i<total&& i<boxes.length;i++){
+for(let i =0; i<totalboxes&& i<boxes.length;i++){
 const roll = Math.floor(Math.random() * 6) + 1;
   if (!gameStarted) {
     if (roll === 6 && position === -1) {
@@ -57,6 +56,9 @@ const roll = Math.floor(Math.random() * 6) + 1;
       game.score = 0;
       scoreEl.textContent = "0";
       Level.textContent="1";
+       position += roll;
+       game.score += roll;
+       scoreEl.textContent = game.score;
       
     } else {
       for (let i = 0; i < 6; i++) {
@@ -66,10 +68,6 @@ const roll = Math.floor(Math.random() * 6) + 1;
         }
       }
     }
-  } else {
-    position += roll;
-    game.score += roll;
-    scoreEl.textContent = game.score;
   }
    const totalboxes = boxes.length;
   if (position >= totalboxes) {
@@ -93,8 +91,6 @@ setTimeout(() => {
       customAlert.style.display = "none";
     };
   }
-}
-
   function showToast(message) {
     const x = document.getElementById("snackbar");
     x.textContent = message;
@@ -127,17 +123,9 @@ setTimeout(() => {
 
   if(position===11 || position>11){
   Level.textContent="2"
-  Level.style.visibility="visible"
-  au.style.visibility="visible"
-  bu.style.visibility="visible"
-  
-
   }
   if(position===21 || position>21){
   Level.textContent="3"
-  Level.style.visibility="visible"
-  cu.style.visibility="visible"
-  du.style.visibility="visible"
   }
   if(position===30 || position>30){
   Level.textContent="4"
@@ -146,8 +134,6 @@ setTimeout(() => {
   }
   if(position === 41){
   Level.textContent="5"
-  Level.style.visibility="visible"
-
   }
 
   if (boxes[position] && totalboxes > boxes[position]) {
@@ -157,8 +143,7 @@ setTimeout(() => {
     setTimeout(() => {
       scoreEl.textContent = "0";
       document.getElementById("levelscore").disabled="true"
-    }, 2000);
-    
+    }, 2000); 
   }
   for (let i = 0; i < 6; i++) {
     const el = document.getElementById(`dice${i}`);
@@ -169,5 +154,5 @@ setTimeout(() => {
   if (boxes[position]) {
     boxes[position].appendChild(circleDiv);
   }
-
+}
 })
