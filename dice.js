@@ -47,18 +47,15 @@ resetbtn.addEventListener("click", resetGame);
 
 
 rollBtn.addEventListener("click",()=>{
-for(let i =0; i<totalboxes&& i<boxes.length;i++){
+for(let i =0; i<totalboxes;i++){
 const roll = Math.floor(Math.random() * 6) + 1;
   if (!gameStarted) {
     if (roll === 6 && position === -1) {
       gameStarted = true;
-      position = 0;
-      game.score = 0;
+      position = -1;
       scoreEl.textContent = "0";
       Level.textContent="1";
-       position += roll;
-       game.score += roll;
-       scoreEl.textContent = game.score;
+
       
     } else {
       for (let i = 0; i < 6; i++) {
@@ -68,10 +65,13 @@ const roll = Math.floor(Math.random() * 6) + 1;
         }
       }
     }
+    } else {
+    position += roll;
+    game.score += roll;
+    scoreEl.textContent = game.score;
   }
-   const totalboxes = boxes.length;
-  if (position >= totalboxes) {
-    position = totalboxes - 1;
+  if (position >= boxes.length) {
+    position = boxes.length - 1 ;
     showToast("Game Over!☠️");
     customAlert.style.display = "none";
     scoreEl.textContent = "0";
