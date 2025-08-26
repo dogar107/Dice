@@ -155,14 +155,13 @@ rollbtn.addEventListener("click", () => {
     showToast("Oh no! You hit a trap!💀");
     customAlert.style.display = "none";
     scoreEl.textContent = "0";
-    Level.style.visibility="hidden"
+    Level.style.visibility="1"
     dice0.style.visibility="hidden"
     setTimeout(() => {
       resetGame();
       game.reset();
       customAlert.style.display = "block";
-      dice0.style.visibility="visible"
-    }, 2000);
+    }, 1000);
 
     okBtn.onclick = () => {
       customAlert.style.display = "none";
