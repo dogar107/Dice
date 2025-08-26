@@ -241,10 +241,12 @@ rollbtn.addEventListener("click", () => {
       }, 400);
     }
   }
-},2000)
   if (boxes[position]) {
     boxes[position].appendChild(circleDiv);
   }
+})
+
+
 
  
   
