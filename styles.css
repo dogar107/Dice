@@ -11,7 +11,7 @@ background-color: gray;
     position: relative;
     font-size: 23px;
     cursor: pointer;
-    visibility: hidden;
+    
 }
 
 .btn1:hover{
@@ -20,7 +20,7 @@ background-color: darkred;
 }
 
 .btn2{
-visibility: hidden;
+
 background-color: gray;
     color: whitesmoke;
     border: none;
@@ -46,11 +46,11 @@ background-color: darkred;
 .p2{
 color:whitesmoke;
 font-size: 15px;
-visibility: hidden;
+
 }
 
 .p3{
-visibility: hidden;
+
 color:whitesmoke;
 font-size: 15px;
     left: 18px;
@@ -202,7 +202,7 @@ background-color: gray;
 
 #dice0{
 display: block;
-visibility: hidden;
+
 }
 
 #boxtrap3{
@@ -298,7 +298,7 @@ width: 15px;
 height: 15px;
 display: flex;
 position: absolute;
-visibility: hidden;
+
 
 }
 
@@ -307,7 +307,7 @@ color:whitesmoke;
 font-size: 30px;
 left: 27px;
 position: relative;
-visibility: hidden;
+
 
 
 }
@@ -316,7 +316,7 @@ visibility: hidden;
 color:whitesmoke;
 left: 25px;
 position: relative;
-visibility: hidden;
+
 }
 
 .me{
@@ -657,7 +657,7 @@ height:100%;
 display: flex;
 top: -380px;
 position: relative;
-visibility: hidden;
+
 }
 
 #box14{
@@ -817,7 +817,7 @@ visibility: hidden;
 ;
     position: relative;
     top: -638px;
-    visibility: hidden;
+   
     
 }
 
@@ -826,7 +826,7 @@ visibility: hidden;
 ;
     position: relative;
     top: -850px;
-    visibility: hidden;
+ 
     
 }
 
@@ -834,7 +834,7 @@ visibility: hidden;
     display: flex
 ;
     position: relative;
-    visibility: hidden;
+   
     
 }
 
@@ -992,7 +992,7 @@ align-items: center;
 }
 
 .levelscore{
-  visibility: hidden;
+ 
 position: relative;
     align-items: center;
     display: flex;
@@ -1006,7 +1006,7 @@ position: relative;
 }
 
 .boards{
-visibility: hidden;
+
 }
 
 #boards {
@@ -1015,7 +1015,7 @@ visibility: hidden;
     background-color: antiquewhite;
     width: 685px;
     left: 8%;
-    visibility: hidden;
+    
     border-style: solid;
     border-color: white;
     border-image: initial;
@@ -1044,7 +1044,7 @@ visibility: hidden;
 }
 
 #ii {
-    visibility: hidden;
+    
 }
 
 .board {
@@ -1066,7 +1066,7 @@ visibility: hidden;
     display: flex;
     top: -360px;
     position: relative;
-    visibility: hidden;
+   
     gap: 7px;
 }
 
@@ -1074,7 +1074,7 @@ visibility: hidden;
     display: flex;
         top: -562px;
     position: relative;
-    visibility: hidden;
+   
     gap: 7px;
 }
 
@@ -1082,7 +1082,7 @@ visibility: hidden;
     display: flex;
     position: relative;
     top: -765px;
-    visibility: hidden;
+  
     gap: 7px;
 }
 
@@ -1090,7 +1090,7 @@ visibility: hidden;
     display: flex;
     position: relative;
     top: -968px;
-    visibility: hidden;
+ 
     gap: 7px;
 }
 
@@ -1144,7 +1144,7 @@ visibility: hidden;
     left: 74%;
     background: none;
     border: none;
-    visibility: hidden;
+   
         top: 36%;
         cursor:pointer;
 
@@ -1152,7 +1152,7 @@ visibility: hidden;
 
 .heading{
 color:white;
-visibility: hidden;
+
 }
 
 .totalscore{
