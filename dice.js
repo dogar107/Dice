@@ -27,6 +27,7 @@ const scoreEl=document.getElementById("score");
 const traps = ["boxtrap1", "boxtrap2", "boxtrap3", "boxtrap4", "boxtrap5", "boxtrap6", "boxtrap7", "boxtrap8","boxtrap9", "boxtrap10","boxtrap11","boxtrap12"];
 const circleDiv=document.getElementById("circle");
 const resetbtn = document.getElementById("reset");
+const Level = document.getElementById("levelscore");
 
 function resetGame() {
   position = -1;
@@ -55,27 +56,13 @@ const roll = Math.floor(Math.random() * 6) + 1;
       position = 0;
       game.score = 0;
       scoreEl.textContent = "0";
+      Level.textContent="1";
       
     } else {
       for (let i = 0; i < 6; i++) {
         const el = document.getElementById(`dice${i}`);
         if (el) {
           el.style.display = i === roll - 1 ? "block" : "none";
-          el.style.transition = "transform 0.1s ease";
-
-          el.style.transform = "translateX(-5px)";
-          setTimeout(() => {
-            el.style.transform = "translateX(5px)";
-          }, 100);
-          setTimeout(() => {
-            el.style.transform = "translateX(-5px)";
-          }, 200);
-          setTimeout(() => {
-            el.style.transform = "translateX(5px)";
-          }, 300);
-          setTimeout(() => {
-            el.style.transform = "translateX(0)";
-          }, 400);
         }
       }
     }
@@ -106,6 +93,7 @@ setTimeout(() => {
       customAlert.style.display = "none";
     };
   }
+}
 
   function showToast(message) {
     const x = document.getElementById("snackbar");
@@ -182,13 +170,4 @@ setTimeout(() => {
     boxes[position].appendChild(circleDiv);
   }
 
- 
-  
-
- 
-
-    
-
-     
-}
 })

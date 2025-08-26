@@ -91,6 +91,8 @@ align-items: center;
   transition: transform 0.5s;
   transform-style: preserve-3d;
   position: relative;
+  transition:transform 0.3s ease;
+  transform:translateX(-5px)
 }
 
 
