@@ -18,25 +18,44 @@ const game = new Game();
 let position = -1;
 let gameStarted = false;
 let score = 0;
-const totalboxes = 40;
+//const totalboxes = 40;
+const boxSize=11;
+const boxindex=0;
 const rollBtn = document.getElementById("rollbtn");
 const boxes = document.querySelectorAll(".box");
+const scoreEl=document.getElementById("score");
+const traps = ["boxtrap1", "boxtrap2", "boxtrap3", "boxtrap4", "boxtrap5", "boxtrap6", "boxtrap7", "boxtrap8","boxtrap9", "boxtrap10","boxtrap11","boxtrap12"];
+const circleDiv=document.getElementById("circle");
+const resetbtn = document.getElementById("reset");
+
+function resetGame() {
+  position = -1;
+  game.reset();
+  gameStarted = false;
+  scoreEl.textContent = "0";
+
+  for (let i = 0; i < 6; i++) {
+    const el = document.getElementById(`dice${i}`);
+    if (el) {
+      el.style.display = "none";
+    }
+  }
+}
+resetbtn.addEventListener("click", resetGame);
 
 
 
 rollBtn.addEventListener("click",()=>{
+const total=boxSize + boxindex;
+for(let i =0; i<total&& i<boxes.length;i++){
 const roll = Math.floor(Math.random() * 6) + 1;
-for(let i =0; i<totalboxes&& i<boxes.length;i++){
-if(!gameStarted){
-const roll = Math.floor(Math.random() * 6) + 1;
-  diceSound.play();
   if (!gameStarted) {
     if (roll === 6 && position === -1) {
       gameStarted = true;
       position = 0;
       game.score = 0;
       scoreEl.textContent = "0";
-      document.getElementById("circle").disabled="true";
+      
     } else {
       for (let i = 0; i < 6; i++) {
         const el = document.getElementById(`dice${i}`);
@@ -171,6 +190,5 @@ setTimeout(() => {
     
 
      
-}
 }
 })
