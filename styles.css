@@ -274,9 +274,7 @@ position: relative;
 
 }
 
-.board2{
-display: flex;
-}
+
 
 .boards{
 justify-content: space-between;
@@ -290,7 +288,7 @@ top: -99px;
 }
 
 html{
-height:-5%;
+height:384%;
 }
 
 .Circle{
@@ -1012,11 +1010,11 @@ visibility: hidden;
 }
 
 #boards {
-        top: -4%;
-    height:526px;
+        top: -1%;
+    height:563px;
     background-color: antiquewhite;
-    width: 534px;
-    left: 19%;
+    width: 685px;
+    left: 8%;
     visibility: hidden;
     border-style: solid;
     border-color: white;
@@ -1053,47 +1051,55 @@ visibility: hidden;
     display: flex;
         top: 46px;
     position: relative;
+    gap: 7px;
 }
 
 .board2 {
     display: flex;
-    top: -167px;
+    top: -28%;
     position: relative;
+    gap: 7px;
+
 }
 
 .board3 {
     display: flex;
-    top: -380px;
+    top: -360px;
     position: relative;
     visibility: hidden;
+    gap: 7px;
 }
 
 .board4 {
     display: flex;
-        top: -593px;
+        top: -562px;
     position: relative;
     visibility: hidden;
+    gap: 7px;
 }
 
 .board5 {
     display: flex;
     position: relative;
-    top: -806px;
+    top: -765px;
     visibility: hidden;
+    gap: 7px;
 }
 
 .board6 {
     display: flex;
     position: relative;
-    top: -1019px;
+    top: -968px;
     visibility: hidden;
+    gap: 7px;
 }
 
 .board7 {
     display: flex
 ;
     position: relative;
-    top: -1105px;
+    top: -1043px;
+    gap: 7px;
 }
 
 #box8 {

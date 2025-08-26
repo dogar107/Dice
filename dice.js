@@ -22,17 +22,7 @@ const totalboxes = 40;
 
 const scoreEl = document.getElementById("score");
 const boxes = document.querySelectorAll(".box");
-const boxtrap1 = document.getElementById("boxtrap1");
-const boxtrap2 = document.getElementById("boxtrap2");
-const boxtrap3 = document.getElementById("boxtrap3");
-const boxtrap4 = document.getElementById("boxtrap4");
 const diceEl = document.querySelectorAll(".dice");
-const box1 = document.getElementById("box1");
-const box2 = document.getElementById("box2");
-const box3 = document.getElementById("box3");
-const box4 = document.getElementById("box4");
-const box5 = document.getElementById("box5");
-const box6 = document.getElementById("box6");
 const rollbtn = document.getElementById("rollbtn");
 const circle = document.createElement("div");
 const resetbtn = document.getElementById("reset");
@@ -53,7 +43,6 @@ const dexter=document.getElementById("dexter");
 const quitbtn=document.getElementById("finishbtn");
 const quit=document.getElementById("quit");
 const startbtn=document.getElementById("startbtn");
-const box7=document.getElementById("box7");
 const traps = ["boxtrap1", "boxtrap2", "boxtrap3", "boxtrap4", "boxtrap5", "boxtrap6", "boxtrap7", "boxtrap8","boxtrap9", "boxtrap10","boxtrap11","boxtrap12"];
 const diceSound = new Audio("audio/dice-roll.mp3");
 const dice0=document.getElementById("dice0");
@@ -165,12 +154,13 @@ rollbtn.addEventListener("click", () => {
   if (boxes[position] && traps.includes(boxes[position].id)) {
     showToast("Oh no! You hit a trap!💀");
     customAlert.style.display = "none";
+    scoreEl.textContent = "0";
+    Level.style.visibility="hidden"
+    dice0.style.visibility="hidden"
     setTimeout(() => {
       resetGame();
       game.reset();
-      scoreEl.textContent = "0";
       customAlert.style.display = "block";
-      Level.textContent="1"
       dice0.style.visibility="visible"
     }, 2000);
 
