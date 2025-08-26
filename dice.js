@@ -70,6 +70,7 @@ function resetGame() {
   cu.style.visibility="hidden"
   du.style.visibility="hidden"
   eu.style.visibility="hidden"
+  Level.style.visibility="hidden"
 
   for (let i = 0; i < 6; i++) {
     const el = document.getElementById(`dice${i}`);
@@ -89,6 +90,7 @@ rollbtn.addEventListener("click", () => {
       game.score = 0;
       scoreEl.textContent = "0";
       circleDiv.style.visibility="visible"
+      Level.style.visibility="visible"
     } else {
       for (let i = 0; i < 6; i++) {
         const el = document.getElementById(`dice${i}`);
@@ -125,6 +127,7 @@ rollbtn.addEventListener("click", () => {
     showToast("Game Over!☠️");
     customAlert.style.display = "none";
     scoreEl.textContent = "0";
+    Level.style.visibility="hidden"
     game.reset();
     resetGame();
 
@@ -155,11 +158,11 @@ rollbtn.addEventListener("click", () => {
     showToast("Oh no! You hit a trap!💀");
     customAlert.style.display = "none";
     scoreEl.textContent = "0";
-    Level.style.visibility="1"
-    dice0.style.visibility="hidden"
+    Level.textContent="1";
+    dice0.style.visibility="hidden";
+    game.reset();
     setTimeout(() => {
       resetGame();
-      game.reset();
       customAlert.style.display = "block";
     }, 1000);
 
@@ -258,7 +261,7 @@ customAlert1.style.display="block";
     total.style.visibility="visible"
     scoreEl.style.visibility="visible"
     level.style.visibility="visible"
-    Level.style.visibility="visible"
+    Level.style.visibility="hidden"
     quit.style.visibility="visible"
     heading.style.visibility="visible"
     
