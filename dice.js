@@ -19,7 +19,8 @@ let position = -1;
 let gameStarted = false;
 let score = 0;
 const totalboxes = 40;
-const rollBtn = document.getElementById("rolldice");
+const rollBtn = document.getElementById("rollbtn");
+const boxes = document.querySelectorAll(".box");
 
 
 
