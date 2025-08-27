@@ -18,7 +18,7 @@ const game = new Game();
 let position = -1;
 let gameStarted = false;
 let score = 0;
-const totalboxes = 40;
+const totalboxes = 42;
 
 const rollBtn = document.getElementById("rollbtn");
 const boxes = document.querySelectorAll(".box");
@@ -47,12 +47,12 @@ resetbtn.addEventListener("click", resetGame);
 
 
 rollBtn.addEventListener("click",()=>{
-for(let i =0; i<totalboxes;i++){
+for(let i =0; i<=totalboxes;i++){
 const roll = Math.floor(Math.random() * 6) + 1;
   if (!gameStarted) {
     if (roll === 6 && position === -1) {
       gameStarted = true;
-      position = -1;
+      position = 0;
       scoreEl.textContent = "0";
       Level.textContent="1";
 
@@ -108,7 +108,6 @@ setTimeout(() => {
       scoreEl.textContent = "0";
       customAlert.style.display = "block";
       Level.textContent="1"
-      dice0.style.visibility="visible"
     }, 2000);
 
     okBtn.onclick = () => {
@@ -129,8 +128,6 @@ setTimeout(() => {
   }
   if(position===30 || position>30){
   Level.textContent="4"
-  Level.style.visibility="visible"
-  eu.style.visibility="visible"
   }
   if(position === 41){
   Level.textContent="5"
@@ -156,3 +153,4 @@ setTimeout(() => {
   }
 }
 })
+

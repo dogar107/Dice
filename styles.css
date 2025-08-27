@@ -70,14 +70,17 @@ align-items: center;
 .box{
   width: 64px;
   height: 64px;
-  background: black;
+  background: gray;
   border: 2px solid rgb(32, 31, 31);
   border-radius: 12px;
-  display: none; 
   position: relative;
   cursor: pointer;
   transition: transform 0.5s;
   transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
 }
 
 .dice {
@@ -155,29 +158,9 @@ align-items: center;
     background-color: gray;
 }
 
-#boxtrap1{
-    display: block;
-    
-    color: whitesmoke;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    background-color: gray;
-    border: 2px groove red;
-}
 
-#boxtrap2{
-    display: block;
-  
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: whitesmoke;
-    background-color: gray;
-    border: 2px groove red;
-}
+
+
 
 #box5{
     display: block;
@@ -192,7 +175,7 @@ align-items: center;
 
 #end{
 display: block;
-top:-128px;
+
 
 position: relative;
 display: flex;
@@ -207,15 +190,7 @@ display: block;
 
 }
 
-#boxtrap3{
-display: flex;
-justify-content: center;
-align-items: center;
-color:whitesmoke;
-background-color: gray;
-border: 2px groove red;
 
-}
 
 #box4{
 display: block;
@@ -228,14 +203,6 @@ background-color: gray;
 border: 2px groove darkgreen;
 }
 
-#boxtrap4{
-align-items: center;
-justify-content: center;
-display: flex;
-color: whitesmoke;
-background-color: gray;
-border:2px groove red;
-}
 
 #box3{
 display:block;
@@ -300,6 +267,7 @@ width: 15px;
 height: 15px;
 display: flex;
 position: absolute;
+display: none;
 
 
 }
@@ -481,59 +449,6 @@ position: relative;
   100% { left:0px; top:0px;}
 }
 
-/* #showscore {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 3;
-  font-size: 50px;
-  /* animation: slideFromTop 5s ease 2s infinite alternate;
-    animation: grow 1s ease-out forwards;
-
-  border:1px dashed whitesmoke;
-  color:whitesmoke
-
-} */
-/* #showscore {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* ✅ center it properly 
-  z-index: 3;
-  padding: 10px 20px;
-  border: 1px dashed whitesmoke;
-  color: whitesmoke;
-  animation: grow 0.8s ease-out forwards;
-}
-
-#showscore h1 {
-  font-size: 60px;
-  margin: 0;
-  color: whitesmoke;
-}
-
-@keyframes grow {
-  from {
-    transform: scale(0.5) translate(-50%, -50%);
-    opacity: 0.3;
-  }
-  to {
-    transform: scale(1) translate(-50%, -50%);
-    opacity: 1;
-  }
-}
-
-
-@keyframes grow {
-  from {
-    transform: scale(0.5);
-    opacity: 0.5;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-} */
 
 #showscore {
   display: none;
@@ -567,417 +482,10 @@ position: relative;
 
 body{
 background-color: black;
-overflow: hidden;
 width:100%;
 height:100%;
+overflow: hidden;
 }
-
-#box7{
-   
-    display: block;
-    position: relative;
-    color: whitesmoke;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: gray;
-}
-
-
-#box8{
-    
-    display: block;
-    position: relative;
-    color: whitesmoke;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: gray;
-}
-
-
-#box9{
-   
-    display: block;
-    position: relative;
-    color: whitesmoke;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: gray;
-}
-
-
-#box10{
- 
-    display: block;
-    position: relative;
-    color: whitesmoke;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: gray;
-}
-
-
-#box11{
-   
-    display: block;
-    position: relative;
-    color: whitesmoke;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: gray;
-}
-
-
-#box12{
-    
-    display: block;
-    position: relative;
-    color: whitesmoke;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: gray;
-}
-
-
-#box13{
-   
-    display: block;
-    position: relative;
-    color: whitesmoke;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: gray;
-}
-
-.board3{
-display: flex;
-top: -380px;
-position: relative;
-
-}
-
-#box14{
- 
-    display: block;
-    position: relative;
-    color: whitesmoke;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: gray;
-}
-
-#box15{
-
-    display: block;
-    position: relative;
-    color: whitesmoke;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: gray;
-}
-
-#box16{
-
-    display: block;
-    position: relative;
-    color: whitesmoke;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: gray;
-}
-
-#box17{
-   
-    display: block;
-    position: relative;
-    color: whitesmoke;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: gray;
-}
-
-#box18{
-
-    display: block;
-    position: relative;
-    color: whitesmoke;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: gray;
-}
-
-#box19{
-
-    display: block;
-    position: relative;
-    color: whitesmoke;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: gray;
-}
-
-#box20{
-
-    display: block;
-    position: relative;
-    color: whitesmoke;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: gray;
-}
-
-#box21{
-
-    display: block;
-    position: relative;
-    color: whitesmoke;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: gray;
-}
-
-#box22{
-   
-    display: block;
-    position: relative;
-    color: whitesmoke;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: gray;
-}
-
-#box23{
-
-    display: block;
-    position: relative;
-    color: whitesmoke;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: gray;
-}
-
-#box24{
-
-    display: block;
-    position: relative;
-    color: whitesmoke;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: gray;
-}
-
-#box25{
-
-    display: block;
-    position: relative;
-    color: whitesmoke;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: gray;
-}
-
-
-
-#box26{
-
-    display: block;
-    position: relative;
-    color: whitesmoke;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: gray;
-}
-
-.board4{
-      display: flex;
-    top: -426px;
-    position: relative;
-   
-}
-
-.board5{
-    display: flex
-;
-    position: relative;
-    top: -638px;
-   
-    
-}
-
-.board6{
-    display: flex
-;
-    position: relative;
-    top: -850px;
- 
-    
-}
-
-.board7{
-    display: flex
-;
-    position: relative;
-   
-    
-}
-
-#box27{
-  top:-128px;
-
-    display: block;
-    position: relative;
-    color: whitesmoke;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: gray;
-}
-
-#box28{
-  top:-128px;
-    display: block;
-    position: relative;
-    color: whitesmoke;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: gray;
-}
-
-#box29{
-top:-128px;
-    display: block;
-    position: relative;
-    color: whitesmoke;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: gray;
-}
-
-.board7 {
-    display: flex
-;
-    position: relative;
-    top: -1062px;
-}
-
-#boxtrap5{
-display: block;
-   
-    color: whitesmoke;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    background-color: gray;
-    border: 2px groove red;
-}
-
-#boxtrap6{
-display: block;
-   
-    color: whitesmoke;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    background-color: gray;
-    border: 2px groove red;
-}
-
-#boxtrap7{
-display: block;
-   
-    color: whitesmoke;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    background-color: gray;
-    border: 2px groove red;
-}
-
-#boxtrap8{
-display: block;
-  
-    color: whitesmoke;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    background-color: gray;
-    border: 2px groove red;
-}
-
-#boxtrap9{
-display: block;
-   
-    color: whitesmoke;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    background-color: gray;
-    border: 2px groove red;
-}
-
-#boxtrap10{
-display: block;
-    
-    color: whitesmoke;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    background-color: gray;
-    border: 2px groove red;
-}
-
-#boxtrap11{
-display: block;
-   top:-128px;
-    color: whitesmoke;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    background-color: gray;
-    border: 2px groove red;
-}
-
-
-#boxtrap12{
-display: block;
-    top:-128px;
-    color: whitesmoke;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    background-color: gray;
-    border: 2px groove red;
-}
-
 
 
 .level{
@@ -1046,93 +554,45 @@ position: relative;
 
 .board {
     display: flex;
-        top: 46px;
+        top: 11px;
     position: relative;
     gap: 7px;
 }
 
-.board2 {
-    display: flex;
-    top: -28%;
-    position: relative;
-    gap: 7px;
 
-}
 
-.board3 {
-    display: flex;
-    top: -360px;
-    position: relative;
-   
-    gap: 7px;
-}
-
-.board4 {
-    display: flex;
-        top: -562px;
-    position: relative;
-   
-    gap: 7px;
-}
-
-.board5 {
-    display: flex;
-    position: relative;
-    top: -765px;
-  
-    gap: 7px;
-}
-
-.board6 {
-    display: flex;
-    position: relative;
-    top: -968px;
- 
-    gap: 7px;
-}
-
-.board7 {
-    display: flex
-;
-    position: relative;
-    top: -1043px;
-    gap: 7px;
-}
-
-#box8 {
-    position: relative;
+#safezone{
+display: block;
     color: whitesmoke;
-    display: flex;
-    justify-content: center;
+    position: relative;
     align-items: center;
+    justify-content: center;
+    display: flex;
     background-color: gray;
+    border: 2px groove green;
 }
 
-#box9 {
-    position: relative;
+#trap{
+display: block;
     color: whitesmoke;
-    display: flex;
-    justify-content: center;
+    position: relative;
     align-items: center;
+    justify-content: center;
+    display: flex;
     background-color: gray;
+    border: 2px groove red;
 }
 
-#box10 {
-    position: relative;
-    color: whitesmoke;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: gray;
-}
 
-#box11 {
-    position: relative;
-    color: whitesmoke;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: gray;
+.box-list {
+  display: grid;
+  grid-template-columns: repeat(6, 64px); 
+  grid-gap: 10px; 
+  justify-content: center; 
+  padding: 10px;
+  list-style: none; 
+  margin: 0 auto;
+  max-width: 500px; 
 }
 
 .logout{
@@ -1147,21 +607,8 @@ position: relative;
 
 }
 
-.heading{
-color:white;
-
-}
-
 .totalscore{
-  display:flex;
-}
-
-#startbtn{
-    background-color: gray;
-    color: white;
-    border-radius: 5px;
-    border: none;
-    padding: 5px;
+display:flex;
 }
 
 
