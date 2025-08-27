@@ -137,34 +137,19 @@ align-items: center;
   right: 10%; 
 }
 
-#start{
-    display: block;
- 
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    color:whitesmoke;
-    background-color: gray;
+#startBtn{
+        top: -99px;
+    position: relative;
+    padding: 12px;
+    border-radius: 11px;
+    background: red;
+    color: white;
+    border: none;
+    width: 79px;
+    height: 49px;
 }
 
 
-
-
-
-
-
-
-#end{
-display: block;
-
-
-position: relative;
-display: flex;
-align-items: center;
-justify-content: center;
-color:whitesmoke;
-background-color: gray;
-}
 
 #dice0{
 display: block;
@@ -302,7 +287,7 @@ border-radius: 5px;
 display: none;
 top: 8%;
 background: green;
-padding: 20px;
+padding:20px;
 text-align: center;
 width: 43%;
 height: 5%;
@@ -343,18 +328,17 @@ background: green;
 left: 4px;
 position: relative;
 top: -7px;
-display: none;
 }
 
 
 #customAlert1 {
 display: none;
-top: 8%;
+top: -22%;
 background: green;
-padding: 20px;
+padding: 141px;
 text-align: center;
 width: 43%;
-height: 5%;
+height: 21%;
 color: white;
 border: none;
 margin-top: 213px;
@@ -365,7 +349,8 @@ z-index:1;
     background: green;
     left: 4px;
     position: relative;
-    top: 18px;
+    top: -96px;
+    font-size: 45px;
 }
 
 @keyframes myfirst {
@@ -530,6 +515,12 @@ display:flex;
 
 .heading{
 color:whitesmoke
+}
+
+.p9{
+font-size: 25px;
+    top: -96px;
+    position: relative;
 }
 
 

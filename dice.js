@@ -28,9 +28,9 @@ const traps=document.getElementById("trap");
 const circleDiv=document.getElementById("circle");
 const resetbtn = document.getElementById("reset");
 const Level = document.getElementById("levelscore");
-const alert= document.getElementById("customAlert1");
+const customAlert1 = document.getElementById("customAlert1");
 
-alert.style.display="block";
+customAlert1.style.display="block"
 
 function resetGame() {
   position = -1;
