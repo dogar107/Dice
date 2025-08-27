@@ -29,8 +29,45 @@ const circleDiv=document.getElementById("circle");
 const resetbtn = document.getElementById("reset");
 const Level = document.getElementById("levelscore");
 const customAlert1 = document.getElementById("customAlert1");
-
+const customAlert = document.getElementById("customAlert");
+const btn = document.getElementById("btn");
+const totalscore=document.getElementById("totalscore");
+const dice0=document.getElementById("dice0");
+const board = document.getElementById("ii");
+const quit = document.getElementById("quit");
 customAlert1.style.display="block"
+
+startBtn.onclick=()=>{
+customAlert1.style.display="none";
+btn.style.filter="none";
+totalscore.style.filter="none";
+dice0.style.filter="none";
+board.style.filter="none";
+
+
+
+}
+
+quit.onclick=()=>{
+ customAlert1.style.display="block";
+ btn.style.filter="blur(5px)";
+totalscore.style.filter="blur(5px)";
+dice0.style.filter="blur(5px)";
+board.style.filter="blur(5px)";
+}
+
+
+startBtn.onclick=()=>{
+customAlert1.style.display="none";
+btn.style.filter="none";
+totalscore.style.filter="none";
+dice0.style.filter="none";
+board.style.filter="none";
+
+
+
+}
+
 
 function resetGame() {
   position = -1;
@@ -140,7 +177,7 @@ setTimeout(() => {
       el.style.display = i === roll - 1 ? "block" : "none";
     }
   }
-  for(let c=0;c===totalboxes;c++){
+  for(let c=0;c===traps;c++){
   if(traps.includes(c)){
   game.reset()
   resetGame()
