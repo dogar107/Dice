@@ -47,7 +47,7 @@ resetbtn.addEventListener("click", resetGame);
 
 
 rollBtn.addEventListener("click",()=>{
-for(let i =0; i<=totalboxes;i++){
+for(let i =0; i<totalboxes;i++){
 const roll = Math.floor(Math.random() * 6) + 1;
   if (!gameStarted) {
     if (roll === 6 && position === -1) {
@@ -55,6 +55,8 @@ const roll = Math.floor(Math.random() * 6) + 1;
       position = 0;
       scoreEl.textContent = "0";
       Level.textContent="1";
+      circleDiv.classList.add("circleDiv");
+      circleDiv.classList.remove("circleDiv");
 
       
     } else {
