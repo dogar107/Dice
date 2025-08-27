@@ -24,7 +24,6 @@ const totalboxes = 42;
 const rollBtn = document.getElementById("rollbtn");
 const boxes = document.querySelectorAll(".box");
 const scoreEl=document.getElementById("score");
-const traps=document.getElementById("trap");
 const circleDiv=document.getElementById("circle");
 const resetbtn = document.getElementById("reset");
 const Level = document.getElementById("levelscore");
@@ -35,6 +34,7 @@ const totalscore=document.getElementById("totalscore");
 const dice0=document.getElementById("dice0");
 const board = document.getElementById("ii");
 const quit = document.getElementById("quit");
+const traps = [6,11,16,21,26,31,36,39];
 customAlert1.style.display="block"
 
 startBtn.onclick=()=>{
@@ -93,6 +93,7 @@ const roll = Math.floor(Math.random() * 6) + 1;
       position = 0;
       scoreEl.textContent = "0";
       Level.textContent="1";
+      circleDiv.style.display="block";
 
       
     } else {
@@ -177,15 +178,20 @@ setTimeout(() => {
       el.style.display = i === roll - 1 ? "block" : "none";
     }
   }
-  for(let c=0;c===traps;c++){
-  if(traps.includes(c)){
-  game.reset()
+  
+  for(let i=0; i<totalboxes;i++){
+  if(position < traps.length){
   resetGame()
-  showToast("Game Over!")
-  scoreEl.textContent="0"
+  game.reset()
+
+  }
   }
   
-  }
+
+
+ 
+  
+  
   if (boxes[position]) {
     boxes[position].appendChild(circleDiv);
   }
