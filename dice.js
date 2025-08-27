@@ -20,6 +20,7 @@ let gameStarted = false;
 let score = 0;
 const totalboxes = 42;
 
+
 const rollBtn = document.getElementById("rollbtn");
 const boxes = document.querySelectorAll(".box");
 const scoreEl=document.getElementById("score");
@@ -33,7 +34,7 @@ function resetGame() {
   game.reset();
   gameStarted = false;
   scoreEl.textContent = "0";
-  document.getElementById("levelscore").disabled="true"
+  
 
   for (let i = 0; i < 6; i++) {
     const el = document.getElementById(`dice${i}`);
@@ -44,10 +45,7 @@ function resetGame() {
 }
 resetbtn.addEventListener("click", resetGame);
 
-
-
 rollBtn.addEventListener("click",()=>{
-for(let i =0; i<totalboxes;i++){
 const roll = Math.floor(Math.random() * 6) + 1;
   if (!gameStarted) {
     if (roll === 6 && position === -1) {
@@ -55,15 +53,13 @@ const roll = Math.floor(Math.random() * 6) + 1;
       position = 0;
       scoreEl.textContent = "0";
       Level.textContent="1";
-      circleDiv.classList.add("circleDiv");
-      circleDiv.classList.remove("circleDiv");
 
       
     } else {
-      for (let i = 0; i < 6; i++) {
-        const el = document.getElementById(`dice${i}`);
+      for (let j = 0; j < 6; j++) {
+        const el = document.getElementById(`dice${j}`);
         if (el) {
-          el.style.display = i === roll - 1 ? "block" : "none";
+          el.style.display = j === roll - 1 ? "block" : "none";
         }
       }
     }
@@ -101,16 +97,7 @@ setTimeout(() => {
       x.classList.remove("show");
     }, 3000);
   }
-   if (boxes[position] && traps.includes(boxes[position].id)) {
-    showToast("Oh no! You hit a trap!💀");
-    customAlert.style.display = "none";
-    setTimeout(() => {
-      resetGame();
-      game.reset();
-      scoreEl.textContent = "0";
-      customAlert.style.display = "block";
-      Level.textContent="1"
-    }, 2000);
+
 
     okBtn.onclick = () => {
       customAlert.style.display = "none";
@@ -120,15 +107,15 @@ setTimeout(() => {
     cancelBtn.onclick = () => {
       customAlert.style.display = "none";
     };
-  }
+  
 
-  if(position===11 || position>11){
+  if(position===11){
   Level.textContent="2"
   }
-  if(position===21 || position>21){
+  if(position===21 ){
   Level.textContent="3"
   }
-  if(position===30 || position>30){
+  if(position===30){
   Level.textContent="4"
   }
   if(position === 41){
@@ -153,6 +140,5 @@ setTimeout(() => {
   if (boxes[position]) {
     boxes[position].appendChild(circleDiv);
   }
-}
 })
 

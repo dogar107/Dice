@@ -94,8 +94,7 @@ align-items: center;
   transition: transform 0.5s;
   transform-style: preserve-3d;
   position: relative;
-  transition:transform 0.3s ease;
-  transform:translateX(-5px)
+ 
 }
 
 
@@ -267,7 +266,7 @@ width: 15px;
 height: 15px;
 display: flex;
 position: absolute;
-display: none;
+
 
 
 }
@@ -501,7 +500,7 @@ align-items: center;
 }
 
 .levelscore{
- 
+display:none; 
 position: relative;
     align-items: center;
     display: flex;
@@ -609,6 +608,10 @@ display: block;
 
 .totalscore{
 display:flex;
+}
+
+.heading{
+color:whitesmoke
 }
 
 
