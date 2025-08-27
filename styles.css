@@ -147,31 +147,12 @@ align-items: center;
     background-color: gray;
 }
 
-#box1{
-   
-    display: block;
-    position: relative;
-    color:whitesmoke;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: gray;
-}
 
 
 
 
 
-#box5{
-    display: block;
-  
-    position: relative;
-    color:whitesmoke;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: gray;
-}
+
 
 #end{
 display: block;
@@ -190,61 +171,6 @@ display: block;
 
 }
 
-
-
-#box4{
-display: block;
-color:whitesmoke;
-position: relative;
-display: flex;
-justify-content: center;
-align-items: center;
-background-color: gray;
-border: 2px groove darkgreen;
-}
-
-
-#box3{
-display:block;
-color:whitesmoke;
-display: flex;
-justify-content: center;
-align-items: center;
-background-color: gray;
-
-}
-
-#box6{
-display: block;
-position: relative;
-color:whitesmoke;
-display: flex;
-justify-content: center;
-align-items: center;
-background-color: gray;
-border:2px groove darkgreen;
-}
-
-#box2{
-display: block;
-position: relative;
-color:whitesmoke;
-display: flex;
-justify-content: center;
-align-items: center;
-background-color: gray;
-border:2px groove darkgreen;
-}
-
-.board{
-display: flex;;
-top: 213px;
-position: relative;
-
-}
-
-
-
 .boards{
 justify-content: space-between;
 align-self: flex-end;
@@ -257,7 +183,7 @@ top: -99px;
 }
 
 html{
-height:384%;
+height:100%;
 }
 
 .Circle{
@@ -417,6 +343,7 @@ background: green;
 left: 4px;
 position: relative;
 top: -7px;
+display: none;
 }
 
 
@@ -427,12 +354,11 @@ background: green;
 padding: 20px;
 text-align: center;
 width: 43%;
-height: 22%;
+height: 5%;
 color: white;
 border: none;
 margin-top: 213px;
-left:10%;
-position: relative;
+z-index:1;
 }
 
 #alertMessage1 {
@@ -530,17 +456,7 @@ position: relative;
     border-width: 5px 10px 15px;
 }
 
-#customAlert {
-    display: none;
-    top: 8%;
-    text-align: center;
-    width: 43%;
-    height: 17%;
-    color: white;
-    margin-top: 213px;
-    background: green;
-    padding: 20px;
-}
+
 
 .alert-hidden {
     position: absolute;
