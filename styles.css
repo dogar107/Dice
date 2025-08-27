@@ -81,6 +81,7 @@ align-items: center;
     justify-content: center;
     align-items: center;
     color:white;
+
 }
 
 .dice {
@@ -382,6 +383,7 @@ height: 5%;
 color: white;
 border: none;
 margin-top: 213px;
+z-index:1;
 }
 
 #okBtn{

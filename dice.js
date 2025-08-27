@@ -29,6 +29,8 @@ const circleDiv=document.getElementById("circle");
 const resetbtn = document.getElementById("reset");
 const Level = document.getElementById("levelscore");
 
+customAlert1.style.display="block";
+
 function resetGame() {
   position = -1;
   game.reset();
@@ -137,8 +139,18 @@ setTimeout(() => {
       el.style.display = i === roll - 1 ? "block" : "none";
     }
   }
+  for(let c=0;c===totalboxes;c++){
+  if(traps.includes(c)){
+  game.reset()
+  resetGame()
+  showToast("Game Over!")
+  scoreEl.textContent="0"
+  }
+  
+  }
   if (boxes[position]) {
     boxes[position].appendChild(circleDiv);
   }
+  
 })
 
