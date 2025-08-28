@@ -67,6 +67,11 @@ board.style.filter="none";
 
 
 }
+if(position===10){
+for(let i=10;i<20;i++){
+boxes[i].style.display="block"
+}
+}
 
 
 function resetGame() {
@@ -76,12 +81,6 @@ function resetGame() {
   scoreEl.textContent = "0";
   
 
-  for (let i = 0; i < 6; i++) {
-    const el = document.getElementById(`dice${i}`);
-    if (el) {
-      el.style.display = "none";
-    }
-  }
 }
 resetbtn.addEventListener("click", resetGame);
 
@@ -179,19 +178,7 @@ setTimeout(() => {
     }
   }
   
-  for(let i=0; i<totalboxes;i++){
-  if(position < traps.length){
-  resetGame()
-  game.reset()
-
-  }
-  }
-  
-
-
  
-  
-  
   if (boxes[position]) {
     boxes[position].appendChild(circleDiv);
   }
