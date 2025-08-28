@@ -293,9 +293,9 @@ border-radius: 5px;
 
 #customAlert {
 display: none;
-top: 8%;
+top: -8%;
 background: green;
-padding:20px;
+padding:84px;
 text-align: center;
 width: 43%;
 height: 17%;
@@ -361,7 +361,7 @@ left: 33%;
     left: 4px;
     position: relative;
     top: -96px;
-    font-size: 45px;
+    font-size: 41px;
 }
 
 @keyframes myfirst {
@@ -441,16 +441,20 @@ position: relative;
 
 
 #boards {
-        top: -1%;
+  top:-1px;
+       
     height:563px;
     background-color: antiquewhite;
-    width: 685px;
-    left: 8%;
+    width: 595px;
+    
     
     border-style: solid;
     border-color: white;
     border-image: initial;
     border-width: 5px 10px 15px;
+    justify-content: space-around;
+    align-items: center;
+
 }
 
 

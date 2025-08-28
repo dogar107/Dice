@@ -19,6 +19,8 @@ let position = -1;
 let gameStarted = false;
 let score = 0;
 const totalboxes = 42;
+let boxIndex=0;
+let boxSize=10;
 
 
 const rollBtn = document.getElementById("rollbtn");
@@ -34,7 +36,6 @@ const totalscore=document.getElementById("totalscore");
 const dice0=document.getElementById("dice0");
 const board = document.getElementById("ii");
 const quit = document.getElementById("quit");
-const traps = [6,11,16,21,26,31,36,39];
 customAlert1.style.display="block"
 
 startBtn.onclick=()=>{
@@ -66,12 +67,38 @@ board.style.filter="none";
 
 
 
+
 }
-if(position===10){
-for(let i=10;i<20;i++){
-boxes[i].style.display="block"
+
+const boxy = Array.from({ length: 42 }, (_, i) => `Box ${i}`); 
+
+
+function loadMoreBoxes() {
+  const boxList = document.getElementById("box-list"); 
+
+  
+  const end = Math.min(boxIndex + boxSize, boxy.length); 
+  for (let i = boxIndex; i < end; i++) {
+    const box = document.createElement("div"); 
+    box.textContent = boxy[i]; 
+    boxList.appendChild(circleDiv); 
+  }
+
+  boxIndex += boxSize; 
 }
-}
+
+
+loadMoreBoxes();
+
+
+
+
+
+
+
+
+
+
 
 
 function resetGame() {
@@ -149,17 +176,24 @@ setTimeout(() => {
     };
   
 
-  if(position===11){
+  if(position===10){
   Level.textContent="2"
+
+  }else{
+  scoreEl.textContent="0"
+  Level.innerHTML=""
   }
   if(position===21 ){
   Level.textContent="3"
+  
   }
   if(position===30){
   Level.textContent="4"
+
   }
   if(position === 41){
   Level.textContent="5"
+
   }
 
   if (boxes[position] && totalboxes > boxes[position]) {
@@ -171,6 +205,7 @@ setTimeout(() => {
       document.getElementById("levelscore").disabled="true"
     }, 2000); 
   }
+
   for (let i = 0; i < 6; i++) {
     const el = document.getElementById(`dice${i}`);
     if (el) {
