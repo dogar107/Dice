@@ -36,6 +36,7 @@ const totalscore=document.getElementById("totalscore");
 const dice0=document.getElementById("dice0");
 const board = document.getElementById("ii");
 const quit = document.getElementById("quit");
+
 customAlert1.style.display="block"
 
 startBtn.onclick=()=>{
@@ -70,25 +71,28 @@ board.style.filter="none";
 
 }
 
-const boxy = Array.from({ length: 42 }, (_, i) => `Box ${i}`); 
+function showBoxes(position) {
+  container.innerHTML = '';
 
-
-function loadMoreBoxes() {
-  const boxList = document.getElementById("box-list"); 
+  let maxIndex;
+  if (position <= 10) maxIndex = 11;
+  else if (position <= 20) maxIndex = 31;
+  else if (position <= 30) maxIndex = 41;
+  else maxIndex = 41;
 
   
-  const end = Math.min(boxIndex + boxSize, boxy.length); 
-  for (let i = boxIndex; i < end; i++) {
-    const box = document.createElement("div"); 
-    box.textContent = boxy[i]; 
-    boxList.appendChild(circleDiv); 
+  for (let i = position; i < position + maxIndex && i < allBoxes.length; i++) {
+    container.appendChild(allBoxes[i]);
   }
-
-  boxIndex += boxSize; 
 }
 
 
-loadMoreBoxes();
+
+
+
+
+
+
 
 
 
