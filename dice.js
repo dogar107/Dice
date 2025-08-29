@@ -169,7 +169,7 @@ function updateVisibleBoxes(level) {
     }, 2000);
   } else if (currentBox && currentBox.id === "safezone") {
     currentBox.style.backgroundColor = "green";
-    showToast("Safe Zone 🟢");
+    showToast("Safe Zone ");
   }
   }
 }
