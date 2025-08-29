@@ -15,117 +15,75 @@ class Game extends Dice {
 }
 
 const game = new Game();
-let position = -1;
+let position = 0;
 let gameStarted = false;
-let score = 0;
 const totalboxes = 42;
-let boxIndex=0;
-let boxSize=10;
-
 
 const rollBtn = document.getElementById("rollbtn");
 const boxes = document.querySelectorAll(".box");
-const scoreEl=document.getElementById("score");
-const circleDiv=document.getElementById("circle");
+const boxlist = document.querySelector(".box-list");
+const allBoxes = Array.from(boxes); 
+
+const scoreEl = document.getElementById("score");
+const circleDiv = document.getElementById("circle");
 const resetbtn = document.getElementById("reset");
 const Level = document.getElementById("levelscore");
 const customAlert1 = document.getElementById("customAlert1");
 const customAlert = document.getElementById("customAlert");
 const btn = document.getElementById("btn");
-const totalscore=document.getElementById("totalscore");
-const dice0=document.getElementById("dice0");
+const totalscore = document.getElementById("totalscore");
+const dice0 = document.getElementById("dice0");
 const board = document.getElementById("ii");
 const quit = document.getElementById("quit");
+const start = document.getElementById("start");
 
-customAlert1.style.display="block"
+const startBtn = document.getElementById("startBtn");
+const okBtn = document.getElementById("okBtn");
+const cancelBtn = document.getElementById("cancelBtn");
 
-startBtn.onclick=()=>{
-customAlert1.style.display="none";
-btn.style.filter="none";
-totalscore.style.filter="none";
-dice0.style.filter="none";
-board.style.filter="none";
+customAlert1.style.display = "block";
 
+startBtn.onclick = () => {
+  customAlert1.style.display = "none";
+  btn.style.filter = "none";
+  totalscore.style.filter = "none";
+  dice0.style.filter = "none";
+  board.style.filter = "none";
 
+  updateVisibleBoxes(1); 
+};
 
-}
-
-quit.onclick=()=>{
- customAlert1.style.display="block";
- btn.style.filter="blur(5px)";
-totalscore.style.filter="blur(5px)";
-dice0.style.filter="blur(5px)";
-board.style.filter="blur(5px)";
-}
-
-
-startBtn.onclick=()=>{
-customAlert1.style.display="none";
-btn.style.filter="none";
-totalscore.style.filter="none";
-dice0.style.filter="none";
-board.style.filter="none";
-
-
-
-
-}
-
-function showBoxes(position) {
-  container.innerHTML = '';
-
-  let maxIndex;
-  if (position <= 10) maxIndex = 11;
-  else if (position <= 20) maxIndex = 31;
-  else if (position <= 30) maxIndex = 41;
-  else maxIndex = 41;
-
-  
-  for (let i = position; i < position + maxIndex && i < allBoxes.length; i++) {
-    container.appendChild(allBoxes[i]);
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+quit.onclick = () => {
+  customAlert1.style.display = "block";
+  btn.style.filter = "blur(5px)";
+  totalscore.style.filter = "blur(5px)";
+  dice0.style.filter = "blur(5px)";
+  board.style.filter = "blur(5px)";
+};
 
 function resetGame() {
-  position = -1;
+  position = 0;
   game.reset();
   gameStarted = false;
   scoreEl.textContent = "0";
-  
-
+  Level.textContent = "1";
+  updateVisibleBoxes(1); 
 }
+
 resetbtn.addEventListener("click", resetGame);
 
-rollBtn.addEventListener("click",()=>{
-const roll = Math.floor(Math.random() * 6) + 1;
+rollBtn.addEventListener("click", () => {
+  const roll = Math.floor(Math.random() * 6) + 1;
+
   if (!gameStarted) {
-    if (roll === 6 && position === -1) {
+    if (roll === 6 && position === 0) {
       gameStarted = true;
       position = 0;
       scoreEl.textContent = "0";
-      Level.textContent="1";
-      circleDiv.style.display="block";
-
-      
+      Level.textContent = "1";
+      circleDiv.style.display = "block";
+      start.style.backgroundColor="golden";
+      updateVisibleBoxes(1);
     } else {
       for (let j = 0; j < 6; j++) {
         const el = document.getElementById(`dice${j}`);
@@ -134,20 +92,22 @@ const roll = Math.floor(Math.random() * 6) + 1;
         }
       }
     }
-    } else {
+  } else {
     position += roll;
     game.score += roll;
     scoreEl.textContent = game.score;
+    updateLevel(position);
   }
+
   if (position >= boxes.length) {
-    position = boxes.length - 1 ;
+    position = boxes.length - 1;
     showToast("Game Over!☠️");
     customAlert.style.display = "none";
     scoreEl.textContent = "0";
     game.reset();
     resetGame();
 
-setTimeout(() => {
+    setTimeout(() => {
       customAlert.style.display = "block";
     }, 2000);
 
@@ -160,55 +120,7 @@ setTimeout(() => {
       customAlert.style.display = "none";
     };
   }
-  function showToast(message) {
-    const x = document.getElementById("snackbar");
-    x.textContent = message;
-    x.classList.add("show");
-    setTimeout(() => {
-      x.classList.remove("show");
-    }, 3000);
-  }
 
-
-    okBtn.onclick = () => {
-      customAlert.style.display = "none";
-      resetGame();
-    };
-
-    cancelBtn.onclick = () => {
-      customAlert.style.display = "none";
-    };
-  
-
-  if(position===10){
-  Level.textContent="2"
-
-  }else{
-  scoreEl.textContent="0"
-  Level.innerHTML=""
-  }
-  if(position===21 ){
-  Level.textContent="3"
-  
-  }
-  if(position===30){
-  Level.textContent="4"
-
-  }
-  if(position === 41){
-  Level.textContent="5"
-
-  }
-
-  if (boxes[position] && totalboxes > boxes[position]) {
-    showToast("You Win!🎉");
-    game.reset();
-    gameStarted=false;
-    setTimeout(() => {
-      scoreEl.textContent = "0";
-      document.getElementById("levelscore").disabled="true"
-    }, 2000); 
-  }
 
   for (let i = 0; i < 6; i++) {
     const el = document.getElementById(`dice${i}`);
@@ -216,11 +128,79 @@ setTimeout(() => {
       el.style.display = i === roll - 1 ? "block" : "none";
     }
   }
+
   
- 
-  if (boxes[position]) {
-    boxes[position].appendChild(circleDiv);
+
+  if (allBoxes[position]) {
+    allBoxes[position].appendChild(circleDiv);
   }
-  
-})
+});
+
+
+function updateVisibleBoxes(level) {
+  let start = 0;
+  let end = 10;
+
+  if (level === 2) {
+    start = 0;
+    end = 20;
+  } else if (level === 3) {
+    start = 0;
+    end = 30;
+  } else if (level === 4) {
+    start = 0;
+    end = 42;
+  }
+
+ 
+  while (boxlist.firstChild) {
+    boxlist.removeChild(boxlist.firstChild);
+  }
+
+ 
+  for (let i = start; i <= end && i <boxes.length ; i++) {
+    boxlist.appendChild(allBoxes[i]);
+    const currentBox = boxes[position];
+  if (currentBox && currentBox.id === "trap") {
+    currentBox.style.backgroundColor = "red";
+    showToast("You landed on a TRAP! ☠️");
+    setTimeout(() => {
+      resetGame();
+    }, 2000);
+  } else if (currentBox && currentBox.id === "safezone") {
+    currentBox.style.backgroundColor = "green";
+    showToast("Safe Zone 🟢");
+  }
+  }
+}
+
+function updateLevel(pos) {
+  let level = 1;
+
+  if (pos >= 31) {
+    level = 4;
+  } else if (pos >= 21) {
+    level = 3;
+  } else if (pos >= 11) {
+    level = 2;
+  }
+
+  Level.textContent = level;
+  updateVisibleBoxes(level);
+}
+
+
+
+
+function showToast(message) {
+  const x = document.getElementById("snackbar");
+  x.textContent = message;
+  x.classList.add("show");
+  setTimeout(() => {
+    x.classList.remove("show");
+  }, 3000);
+}
+
+
+
 
