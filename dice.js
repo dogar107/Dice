@@ -82,7 +82,6 @@ rollBtn.addEventListener("click", () => {
       scoreEl.textContent = "0";
       Level.textContent = "1";
       circleDiv.style.display = "block";
-      start.style.backgroundColor="golden";
       updateVisibleBoxes(1);
     } else {
       for (let j = 0; j < 6; j++) {
@@ -163,6 +162,10 @@ function updateVisibleBoxes(level) {
     const currentBox = boxes[position];
   if (currentBox && currentBox.id === "trap") {
     currentBox.style.backgroundColor = "red";
+    currentBox.textContent="X";
+    setTimeout(()=>{
+    currentBox.style.backgroundColor = "";
+    },1000)
     showToast("You landed on a TRAP! ☠️");
     setTimeout(() => {
       resetGame();
@@ -170,7 +173,19 @@ function updateVisibleBoxes(level) {
   } else if (currentBox && currentBox.id === "safezone") {
     currentBox.style.backgroundColor = "green";
     showToast("Safe Zone ");
+    setTimeout(()=>{
+    currentBox.style.backgroundColor = "";
+    },1000)
+  }else if(currentBox && currentBox.id=== "end"){
+  showToast("You Win!");
+  currentBox.style.backgroundColor="golden";
+  setTimeout(()=>{
+    currentBox.style.backgroundColor = "";
+  },1000);
+  gameStarted=false;
+  scoreEl.textContent="0";
   }
+  
   }
 }
 
@@ -200,6 +215,8 @@ function showToast(message) {
     x.classList.remove("show");
   }, 3000);
 }
+
+
 
 
 
