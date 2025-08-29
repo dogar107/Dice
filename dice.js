@@ -23,7 +23,6 @@ const rollBtn = document.getElementById("rollbtn");
 const boxes = document.querySelectorAll(".box");
 const boxlist = document.querySelector(".box-list");
 const allBoxes = Array.from(boxes); 
-
 const scoreEl = document.getElementById("score");
 const circleDiv = document.getElementById("circle");
 const resetbtn = document.getElementById("reset");
@@ -180,7 +179,7 @@ function updateVisibleBoxes(level) {
   showToast("You Win!");
   currentBox.style.backgroundColor="golden";
   setTimeout(()=>{
-    currentBox.style.backgroundColor = "";
+  currentBox.style.backgroundColor = "";
   },1000);
   gameStarted=false;
   scoreEl.textContent="0";
