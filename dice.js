@@ -18,7 +18,6 @@ const game = new Game();
 let position = 0;
 let gameStarted = false;
 const totalboxes = 42;
-
 const rollBtn = document.getElementById("rollbtn");
 const boxes = document.querySelectorAll(".box");
 const boxlist = document.querySelector(".box-list");
@@ -35,7 +34,6 @@ const dice0 = document.getElementById("dice0");
 const board = document.getElementById("ii");
 const quit = document.getElementById("quit");
 const start = document.getElementById("start");
-
 const startBtn = document.getElementById("startBtn");
 const okBtn = document.getElementById("okBtn");
 const cancelBtn = document.getElementById("cancelBtn");
@@ -150,12 +148,10 @@ function updateVisibleBoxes(level) {
     end = 42;
   }
 
- 
   while (boxlist.firstChild) {
     boxlist.removeChild(boxlist.firstChild);
   }
 
- 
   for (let i = start; i <= end && i <boxes.length ; i++) {
     boxlist.appendChild(allBoxes[i]);
     const currentBox = boxes[position];
@@ -184,13 +180,11 @@ function updateVisibleBoxes(level) {
   gameStarted=false;
   scoreEl.textContent="0";
   }
-  
   }
 }
 
 function updateLevel(pos) {
   let level = 1;
-
   if (pos >= 31) {
     level = 4;
   } else if (pos >= 21) {
@@ -198,13 +192,9 @@ function updateLevel(pos) {
   } else if (pos >= 11) {
     level = 2;
   }
-
   Level.textContent = level;
   updateVisibleBoxes(level);
 }
-
-
-
 
 function showToast(message) {
   const x = document.getElementById("snackbar");
