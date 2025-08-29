@@ -39,7 +39,6 @@ const okBtn = document.getElementById("okBtn");
 const cancelBtn = document.getElementById("cancelBtn");
 
 customAlert1.style.display = "block";
-
 startBtn.onclick = () => {
   customAlert1.style.display = "none";
   btn.style.filter = "none";
