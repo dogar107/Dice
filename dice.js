@@ -62,7 +62,7 @@ function resetGame() {
   game.reset();
   gameStarted = false;
   scoreEl.textContent = "0";
-  Level.textContent = "1";
+  Level.textContent = "";
   updateVisibleBoxes(1); 
 }
 
@@ -183,13 +183,16 @@ function updateVisibleBoxes(level) {
 }
 
 function updateLevel(pos) {
-  let level = 1;
-  if (pos >= 31) {
+  let level = "";
+  
+  if (pos ===30 || pos >= 31) {
     level = 4;
-  } else if (pos >= 21) {
+  } else if (pos===20 || pos >= 21) {
     level = 3;
-  } else if (pos >= 11) {
+  } else if (pos===10 || pos >= 11) {
     level = 2;
+  }else if(pos===0){
+    level = 1
   }
   Level.textContent = level;
   updateVisibleBoxes(level);
